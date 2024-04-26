@@ -9,10 +9,11 @@ phases:
   build:
     commands:
       - echo 'Build started on $(date)'
+      - mkdir build
       - npm install
       - npm run build
       - mkdir -p var/www/html
-#      - cp -r build var/www/html
+      - cp -r build var/www/html
   post_build:
     commands:
       - echo 'Configuring NGINX'
