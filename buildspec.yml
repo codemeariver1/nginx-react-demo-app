@@ -16,7 +16,8 @@ phases:
   post_build:
     commands:
       - echo 'Configuring NGINX'
-      - aws s3 sync build/ s3://nginx-react-demo-app-artifacts/Nginx-React-Demo-App/build
+#      - aws s3 sync build/ s3://nginx-react-demo-app-artifacts/Nginx-React-Demo-App/build
 artifacts:
   files:
     - "**/*"
+    - "./build"
