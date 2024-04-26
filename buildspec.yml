@@ -13,7 +13,6 @@ phases:
       - npm run build
       - mkdir -p var/www/html
       - cp -r build var/www/html
-      - cp index.html var/www/html
   post_build:
     commands:
       - echo 'Configuring NGINX'
