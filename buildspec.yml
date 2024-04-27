@@ -3,22 +3,20 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing NGINX
+#      - echo Installing NGINX
       - sudo apt update
-      - sudo apt install -y nginx
+#      - sudo apt install -y nginx
   build:
     commands:
       - echo Build started on $(date)
       - npm install
       - npm run build
-      - mkdir -p var/www/html
-      - cp -r build var/www/html
-#      - scp -r build/* ubuntu@ip-10-0-0-41:/var/www/html
-      - echo $(ls)
+#      - mkdir -p var/www/html
+#      - cp -r build var/www/html
+#      - echo $(ls)
   post_build:
     commands:
-      - echo Configuring NGINX
-#      - aws s3 sync build/ s3://nginx-react-demo-app-artifacts/Nginx-React-Demo-App/build
+#      - echo Configuring NGINX
 artifacts:
   files:
     - "**/*"
