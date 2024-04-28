@@ -15,12 +15,9 @@ phases:
 #      - echo $(ls)
   post_build:
     commands:
-#      - echo $CODEBUILD_SRC_DIR
+      - echo $CODEBUILD_SRC_DIR
+      - echo $CODEBUILD_BUILD_NUMBER
 #      - echo Configuring NGINX
 artifacts:
   files:
     - "**/*"
-    - /build
-    - build/
-    - build/*
-    - build/**
