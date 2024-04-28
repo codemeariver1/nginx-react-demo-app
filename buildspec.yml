@@ -17,6 +17,8 @@ phases:
     commands:
       - echo $CODEBUILD_SRC_DIR
       - echo $CODEBUILD_BUILD_ID
+      - echo $CODEBUILD_LOG_PATH
+      - echo $CODEBUILD_PUBLIC_BUILD_URL
 #      - echo Configuring NGINX
 artifacts:
   files:
