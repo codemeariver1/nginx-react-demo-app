@@ -5,11 +5,10 @@ phases:
     commands:
 #      - echo Installing NGINX
       - sudo apt update
-#      - sudo apt install -y nginx
+      - npm install
   build:
     commands:
       - echo Build started on $(date)
-      - npm install
       - npm run build
 #      - mkdir -p var/www/html
 #      - cp -r build var/www/html
