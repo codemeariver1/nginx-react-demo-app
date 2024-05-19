@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Build started on $(date)
       - npm run build
-#      - mkdir -p var/www/html
+      - mkdir -p var/www/html
       - cp -r build var/www/html
 #      - echo $(ls)
   post_build:
